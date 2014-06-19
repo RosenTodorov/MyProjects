@@ -1,0 +1,21 @@
+﻿
+namespace CinemaBookingSystem
+{
+
+    class TicketFactory
+    {
+        public static Ticket CreateSwiftCar(TicketType type, Movie movie)
+        {
+            Ticket ticket = null;
+
+            switch (type)
+            {//TODO normal ticket and fix price
+                case TicketType.KIDS: ticket = new KidsTicket(movie, 5);
+                    break;
+                case TicketType.STUDENT: ticket = new StudentsTicket(movie, 6);
+                    break;
+            }
+            return ticket;
+        }
+    }
+}

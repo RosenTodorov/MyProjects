@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CinemaBookingSystem
+{
+    class Show
+    {
+        private DateTime time;
+        private CinemaHall hall;
+        private Movie movie;
+        private bool[,] seatReserved;
+
+        public Show(DateTime time, CinemaHall hall, Movie movie)
+        {
+            this.Time = time;
+            this.Hall = hall;
+            this.Movie = movie;
+            this.seatReserved = new bool[Hall.Rows, Hall.Seats];
+        }
+        
+        public DateTime Time
+        {
+            get { return this.time; }
+            set { this.time = value; }
+        }
+
+        public CinemaHall Hall
+        {
+            get { return this.hall; }
+            set { this.hall = value; }
+        }
+
+        public Movie Movie
+        {
+            get { return this.movie; }
+            set { this.movie = value; }
+        }
+
+        public void ReserveSeat(Seat seat)
+        {
+            this.seatReserved[seat.Row, seat.SeatNo] = true;
+        }
+
+        public void CancelSeatReservation(Seat seat)
+        {
+            this.seatReserved[seat.Row, seat.SeatNo] = false;
+        }
+
+        public bool IsSeatReserved(Seat seat)
+        {
+            return this.seatReserved[seat.Row, seat.SeatNo];
+        }
+    }
+}

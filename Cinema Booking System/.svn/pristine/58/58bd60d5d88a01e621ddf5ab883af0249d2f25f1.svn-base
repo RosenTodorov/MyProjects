@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+
+
+namespace CinemaBookingSystem
+{
+    public class Show
+    {
+     //   private DateTime time;
+        private CinemaHall hall;
+        private Movie movie;
+        private bool[,] seatReserved;
+        public DayOfWeek Date {get; set;}
+        public Time Time { get;  set; }
+
+        //public Show(DateTime time, CinemaHall hall, Movie movie)
+        //{
+        //    this.Time = time;
+        //    this.Hall = hall;
+        //    this.Movie = movie;
+        //    this.seatReserved = new bool[Hall.Rows, Hall.Seats];
+        //}
+
+        public Show(CinemaHall hall, Movie movie, DayOfWeek date, Time time)
+        {
+            this.Hall = hall;
+            this.Movie = movie;
+            this.seatReserved = new bool[Hall.Rows, Hall.Seats];
+            this.Date = date;
+            this.Time = time;
+        }
+        
+        //public DateTime Time
+        //{
+        //    get { return this.time; }
+        //    set { this.time = value; }
+        //}
+
+        public CinemaHall Hall
+        {
+            get { return this.hall; }
+            set { this.hall = value; }
+        }
+
+        public Movie Movie
+        {
+            get { return this.movie; }
+            set { this.movie = value; }
+        }
+
+        public void ReserveSeat(Seat seat)
+        {
+            this.seatReserved[seat.Row, seat.SeatNo] = true;
+        }
+
+        public void CancelSeatReservation(Seat seat)
+        {
+            this.seatReserved[seat.Row, seat.SeatNo] = false;
+        }
+
+        public bool IsSeatReserved(Seat seat)
+        {
+            return this.seatReserved[seat.Row, seat.SeatNo];
+        }
+
+        public UIElement Render()
+        {
+            var container = new Grid();
+            container.HorizontalAlignment = HorizontalAlignment.Stretch;
+            
+            
+            var movieButton = new Button();
+            movieButton.Content = this.movie.Name;
+            movieButton.Width = 300;
+            container.Children.Add(movieButton);
+
+            //var hallTextBox = new TextBlock();
+            //hallTextBox.Text = this.Hall.Id;
+            //hallTextBox.Width = 10;
+            //container.Children.Add(hallTextBox);
+
+            //var timeTextBox = new TextBlock();
+            //timeTextBox.Text = string.Format("{0:hh}:{0:mm}", this.Time);
+            //container.Children.Add(timeTextBox);
+            //timeTextBox.Width = 50;
+            
+            return container;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CinemaBookingSystem
+{
+    public class CinemaHallList
+    {
+        List<CinemaHall> halls;
+
+        public CinemaHallList()
+        {
+            halls = new List<CinemaHall>();
+        }
+
+        public CinemaHall this[int index]
+        {
+            get { return this.halls[index]; }
+            set { this.halls[index] = value; }
+        }
+
+        public void LoadHalls()
+        {
+            halls.Add(new CinemaHall("1", 15, 24));
+            halls.Add(new CinemaHall("2", 12, 20));
+            halls.Add(new CinemaHall("3", 12, 18));
+        }
+    }
+}

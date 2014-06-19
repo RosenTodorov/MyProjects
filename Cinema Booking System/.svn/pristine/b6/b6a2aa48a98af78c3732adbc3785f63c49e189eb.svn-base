@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace CinemaBookingSystem
+{
+    /// <summary>
+    /// Interaction logic for ReservationWindow.xaml
+    /// </summary>
+    public partial class ReservationWindow : Window
+    {
+        MovieList movies;
+
+        public ReservationWindow(MovieList movies)
+        {
+            InitializeComponent();
+            this.movies = movies;
+            PopulateWithCells();
+            LoadMovies();
+        }            
+
+        private void PopulateWithCells()
+        {
+            List<List<Button>> lsts = new List<List<Button>>();
+   
+            for (int i = 1; i < 8; i++)
+            {
+                lsts.Add(new List<Button>());
+
+                for (int j = 1; j < 16; j++)
+                {
+                    Seat item = new Seat(i, j);
+                    Button btn = CreateSeatButton(item);
+
+                    lsts[i - 1].Add(btn);
+                }
+            }
+
+            lst.ItemsSource = lsts;
+        }
+
+        private Button CreateSeatButton(Seat item)
+        {
+            Button btn = new Button();
+            btn.Width = 35;
+            btn.Height = 35;
+            btn.Content = item;
+            btn.Margin = new Thickness(4, 4, 4, 4);
+            btn.Style = this.FindResource("SeatButtonStyle") as Style;
+            btn.Click += new RoutedEventHandler(ButtonSeat_Click);
+            //Will search in the Hall and tell if it is busy
+            if (item.SeatNo == 5)
+            {
+                btn.IsEnabled = false;
+            }
+           
+            return btn;
+        }
+
+        private void LoadMovies()
+        {
+            for (int i = 0; i < movies.Count; i++)
+            {
+                Movie movie = movies[i];
+                MenuItem item = new MenuItem();
+                item.Header = movie.Name;
+                item.Click += new RoutedEventHandler(MovieMenuItem_Click);
+                MovieMenu.Items.Add(item);
+            }
+        }
+
+        private void MovieMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem item = (sender as MenuItem);
+            Movie movie = movies.FindMovie(item.Header.ToString());
+            btnMovieMenu.Content = movie.Name;
+            btnMovieMenu.FontSize = 15;
+            DayOfWeekMenu.Items.Clear();
+            LoadProjectionDays(movie);
+        }
+
+        private void LoadProjectionDays(Movie movie)
+        {
+            List<MovieDate> dates = movie.ProjectionTime;
+
+            for (int i = 0; i < dates.Count; i++)
+            {
+                MovieDate date = dates[i];
+                MenuItem item = new MenuItem();
+                item.Header = date.DayOfWeek;
+                item.Click += new RoutedEventHandler(DayOfWeekMenu_Click);
+                DayOfWeekMenu.Items.Add(item);
+            }
+        }
+
+        private void DayOfWeekMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem item = (sender as MenuItem);
+            Movie movie = movies.FindMovie(btnMovieMenu.Content.ToString());
+            btnDayOfWeekMenu.Content = item.Header;
+            List<MovieDate> dates = movie.ProjectionTime;
+            DayOfWeek day = (DayOfWeek)item.Header;
+            List<Time> movieTime = FindProjectionTime(dates, day);
+
+            LoadMovieShowTimes(movieTime);
+        }
+
+        private List<Time> FindProjectionTime(List<MovieDate> dates, DayOfWeek day)
+        {
+            foreach (var date in dates)
+            {
+                if (day.CompareTo(date.DayOfWeek) == 0)
+                {
+                    return date.ShowTime;
+                }
+            }
+            return null;
+        }
+
+        private void LoadMovieShowTimes(List<Time> movieTime)
+        {
+            for (int i = 0; i < movieTime.Count; i++)
+            {
+                Time time = movieTime[i];
+                MenuItem item = new MenuItem();
+                item.Header = time.ToString();
+                item.Click += new RoutedEventHandler(MovieShowTimeMenu_Click);
+                ProjectionTimeMenu.Items.Add(item);
+            }
+        }
+
+        private void MovieShowTimeMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem item = (sender as MenuItem);
+            btnProjectionTime.Content = item.Header;
+        }
+
+        private void menuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button _btn = sender as Button;
+            _btn.ContextMenu.IsEnabled = true;
+            _btn.ContextMenu.PlacementTarget = _btn;
+            _btn.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            _btn.ContextMenu.IsOpen = true;
+        }
+
+        private void ButtonSeat_Click(object sender, RoutedEventArgs e)
+        {
+            Button _btn = sender as Button;
+
+            Seat value = (Seat)_btn.Content;
+
+            //TODO Reserve seat on row/col
+            //MessageBox.Show(string.Format("Button clicked at column {0}, row {1}, value {2}", value.SeatNo, value.Row, value));
+            MessageBox.Show(string.Format("Button clicked at column {0}, row {1}, value {2}", _btn.Name, value.Row, value));
+        }
+    }
+
+
+}

@@ -1,0 +1,105 @@
+﻿<Window x:Class="CinemaBookingSystem.ReservationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReservationWindow" Height="540" Width="773" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <LinearGradientBrush x:Key="BrushOne" EndPoint="0.5,1" StartPoint="0.5,0" >
+            <LinearGradientBrush.GradientStops>
+                <GradientStopCollection>
+                    <GradientStop Color="#FF4DB3C3" Offset="0.004" />
+                    <GradientStop Color="#FF005068" Offset="0.866" />
+                </GradientStopCollection>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+
+        <!-- This style is used for buttons, to remove the WPF default 'animated' mouse over effect -->
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="2"
+                            BorderBrush="#FFC7C7C7"
+                            Padding="4,2" 
+                            CornerRadius="3" 
+                            Background="{DynamicResource BrushOne}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--Create seat buttons -->
+        <DataTemplate x:Key="DataTemplate_Level2">
+            <Button Content="{Binding}" Width="35" Height="35" Margin="4,4,4,4" Click="ButtonSeat_Click"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DataTemplate_Level1">
+            <ItemsControl ItemsSource="{Binding}" ItemTemplate="{DynamicResource DataTemplate_Level2}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DataTemplate>
+
+        <ContextMenu x:Key="MovieContentMenu">
+            <MenuItem Header="Send" />
+        </ContextMenu>
+
+        <CollectionViewSource Source="{Binding ElementName=UI, Path=Windows}" x:Key="MovieMenuItems"/>
+
+    </Window.Resources>
+
+
+    <Grid Background="Black" Height="510" VerticalAlignment="Bottom" Width="765">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="369" Width="745">
+            <ItemsControl x:Name="lst" ItemTemplate="{DynamicResource DataTemplate_Level1}" Margin="46,14,36,-14"/>
+        </Grid>
+
+        <!--Movie Menu-->
+        <Button x:Name="btnMovieMenu" Style="{StaticResource MyButtonStyle}"  DataContext="{Binding ElementName=UI}" HorizontalAlignment="Left"  Width="177"  Margin="59,24,0,440" Click="menuButton_Click" FontFamily="Cambria" FontSize="20" FontWeight="Bold" Grid.Column="1" >
+            <Button.Content>
+                Movie List
+            </Button.Content>
+            <Button.ContextMenu>
+                <ContextMenu x:Name="MovieMenu" Background="{DynamicResource BrushOne}" />
+            </Button.ContextMenu>
+        </Button>
+        <Path x:Name="BtnArrow" Margin="0,46,538,446.5" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Grid.Column="1" Height="17.5"/>
+        
+        <!--Day of week-->
+        
+        <Button x:Name="btnDayOfWeekMenu" Style="{StaticResource MyButtonStyle}"  DataContext="{Binding ElementName=UI}" HorizontalAlignment="Left"  Width="177"  Margin="293,24,0,440" Click="menuButton_Click" FontFamily="Cambria" FontSize="20" FontWeight="Bold" Grid.Column="1" Content="Projection Day" >
+            <Button.ContextMenu>
+                <ContextMenu x:Name="DayOfWeekMenu" Background="{DynamicResource BrushOne}" />
+            </Button.ContextMenu>
+        </Button>
+        <Path x:Name="BtnArrow_DayOfWeek" Margin="0,46,302,446.5" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Grid.Column="1" Height="17.5"/>
+
+        <!--Projection time-->
+        <Button x:Name="btnProjectionTime" Style="{StaticResource MyButtonStyle}"  DataContext="{Binding ElementName=UI}" HorizontalAlignment="Left"  Width="177"  Margin="523,24,0,440" Click="menuButton_Click" FontFamily="Cambria" FontSize="20" FontWeight="Bold" Grid.Column="1" Content="Projection Time" >
+            <Button.ContextMenu>
+                <ContextMenu x:Name="ProjectionTimeMenu" Background="{DynamicResource BrushOne}" />
+            </Button.ContextMenu>
+        </Button>
+        <Path x:Name="BtnArrow_ProjectionTime" Margin="0,46,71,446.5" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z " Grid.Column="1" Height="17.5"/>
+
+    </Grid>
+</Window>

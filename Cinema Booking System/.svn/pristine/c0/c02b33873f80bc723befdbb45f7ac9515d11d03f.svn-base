@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CinemaBookingSystem.MainWindow" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQBiAAAAAAEgAREBACAAAAAQIBCACAJwAgAAAAEAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.ProgramWindow" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAQAAAgAAQAIAAAAAAAAAAAAAABIAAQAACAA=</HashCode>
+      <FileName>ProgramWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.ReservationWindow" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgAAAAAAgAAAAAAAEAAAAAAAAIABMAAAAAAQEA=</HashCode>
+      <FileName>ReservationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.Date" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAJAAAAAAEAAAAAAAAAAQAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>DateTime\Date.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.Time" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAABQAAAEQAAAAAAAAAAAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>DateTime\Time.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.ValidationUtil" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAABAAAAAAAAAAAAAAEAACAgAAAAAAAAA=</HashCode>
+      <FileName>Utils\ValidationUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.CinemaHall" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAkAAAgBAAAIAAAABAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>CinemaHall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.CinemaHallList" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAACAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CinemaHallList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.KidsTicket" Collapsed="true">
+    <Position X="13" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>KidsTicket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CinemaBookingSystem.Movie" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAQAARAAAEAAEAAAQAAAAkAAAAAAAAFAAAABA=</HashCode>
+      <FileName>Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.MovieException" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MovieException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.MovieList" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAAAAAAAAAAAACBAABAQAAAAAAAAAAAAAAoAAAAA=</HashCode>
+      <FileName>MovieList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CinemaBookingSystem.MovieLoader" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCCAAAEAIAABAQAACABABAAAYRQABAAAAAgAA=</HashCode>
+      <FileName>MovieLoader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CinemaBookingSystem.MovieWindow" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAADAAAAAAAAAAAQAAAgACAAA=</HashCode>
+      <FileName>MovieWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.Seat" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAgAEAAAAAAACAAABAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.Show" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAIAAAECAAABAAgAIAAAAAAACBAAAAAAAAAQA=</HashCode>
+      <FileName>Show.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.ShowList" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAEgAACBAAAAQAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>ShowList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.StudentsTicket" Collapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>StudentTicket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CinemaBookingSystem.Ticket" Collapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAEAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Ticket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CinemaBookingSystem.TicketFactory" Collapsed="true">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinemaBookingSystem.BaseTicket" Collapsed="true">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseTicket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="CinemaBookingSystem.MovieDate" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAEEAAABAAA=</HashCode>
+      <FileName>MovieDate.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="CinemaBookingSystem.ICinemaList" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAoAAAAA=</HashCode>
+      <FileName>IMovieList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CinemaBookingSystem.IMovieLoader" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAgAA=</HashCode>
+      <FileName>IMovieLoader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CinemaBookingSystem.IPriceCalculator" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>IPriceCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TicketType" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAgA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Genre" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAABAAAAAgAIgFAAAIIAAAAAAAAAIACCFAAABEQ=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
