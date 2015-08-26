@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\FruitWar\FruitWarGame\bin\Debug\FruitWarGame.exe.config
+C:\Users\user\Desktop\FruitWar\FruitWarGame\bin\Debug\FruitWarGame.exe
+C:\Users\user\Desktop\FruitWar\FruitWarGame\bin\Debug\FruitWarGame.pdb
+C:\Users\user\Desktop\FruitWar\FruitWarGame\obj\Debug\FruitWarGame.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\FruitWar\FruitWarGame\obj\Debug\FruitWarGame.exe
+C:\Users\user\Desktop\FruitWar\FruitWarGame\obj\Debug\FruitWarGame.pdb
