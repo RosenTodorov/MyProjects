@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfernoDb.Models", "InfernoDb.Models\InfernoDb.Models.csproj", "{E83D7E28-BF10-4998-8E6F-BEE3C6601A66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfernoDb.Data", "InfernoDb.Data\InfernoDb.Data.csproj", "{273B165B-FF1A-4219-A86E-6B4E1C4F99F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfernoDb.Client", "InfernoDb.Client\InfernoDb.Client.csproj", "{493FEB63-9729-4CB6-BD33-5BF119EAD46A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelOperating", "ExcelOperating\ExcelOperating.csproj", "{FA15E7AB-F8C2-4DF8-9AB9-2CC4C25C6AE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbData", "MongoDbData\MongoDbData.csproj", "{78245F63-D872-40A5-A95A-648883D4AAD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF", "PDF\PDF.csproj", "{60BA6C5E-8D80-4FD6-8FD3-53639C70B5ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML", "XML\XML.csproj", "{2AE7B512-3B4F-474F-86F6-5D7B1CE4351F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83D7E28-BF10-4998-8E6F-BEE3C6601A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83D7E28-BF10-4998-8E6F-BEE3C6601A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83D7E28-BF10-4998-8E6F-BEE3C6601A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83D7E28-BF10-4998-8E6F-BEE3C6601A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{273B165B-FF1A-4219-A86E-6B4E1C4F99F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273B165B-FF1A-4219-A86E-6B4E1C4F99F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273B165B-FF1A-4219-A86E-6B4E1C4F99F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273B165B-FF1A-4219-A86E-6B4E1C4F99F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493FEB63-9729-4CB6-BD33-5BF119EAD46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493FEB63-9729-4CB6-BD33-5BF119EAD46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493FEB63-9729-4CB6-BD33-5BF119EAD46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493FEB63-9729-4CB6-BD33-5BF119EAD46A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA15E7AB-F8C2-4DF8-9AB9-2CC4C25C6AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA15E7AB-F8C2-4DF8-9AB9-2CC4C25C6AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA15E7AB-F8C2-4DF8-9AB9-2CC4C25C6AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA15E7AB-F8C2-4DF8-9AB9-2CC4C25C6AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78245F63-D872-40A5-A95A-648883D4AAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78245F63-D872-40A5-A95A-648883D4AAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78245F63-D872-40A5-A95A-648883D4AAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78245F63-D872-40A5-A95A-648883D4AAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BA6C5E-8D80-4FD6-8FD3-53639C70B5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BA6C5E-8D80-4FD6-8FD3-53639C70B5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BA6C5E-8D80-4FD6-8FD3-53639C70B5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BA6C5E-8D80-4FD6-8FD3-53639C70B5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE7B512-3B4F-474F-86F6-5D7B1CE4351F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE7B512-3B4F-474F-86F6-5D7B1CE4351F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE7B512-3B4F-474F-86F6-5D7B1CE4351F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE7B512-3B4F-474F-86F6-5D7B1CE4351F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
